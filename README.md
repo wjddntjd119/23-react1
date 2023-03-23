@@ -1,5 +1,39 @@
 # **React1_201930327_정우성**
 ## | 4주차(23.03.23)
+## **Week04.1. JSX에 대해**
+ ### Week04.1.1. JSX란?
+ ***
+ 자바 스크립트 확장 문법
+ >내부적으로 XML/HTML 코드를 자바스크립트로 변환해주는 역할
+
+ <br>
+
+ ### Week04.1.2. JSX의 장점
+***
+> 1. 코드가 간결해 진다.
+> 2. 가독성을 높여 준다.
+> 3. Injection Attack, 해킹 방법을 방어함으로써 보안에 강합니다.
+
+ <br>
+
+### Week04.1.3. JSX 표현방법
+ ***
+ 변수 선언 후, 중괄호를 이용하여 표현 가능
+```javascript
+const name = 'Josh Perez';
+const element = <h1>Hello, {name}</h1>;
+```
+<br>
+ 어트리뷰트에 따옴표를 이용해 문자열 리터럴을 정의
+
+```javascript
+const element = <a href="https://www.reactjs.org" />;
+```
+
+ <br>
+
+
+
 
 <br><br>
 
