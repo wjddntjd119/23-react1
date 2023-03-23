@@ -10,9 +10,9 @@
 
  ### Week04.1.2. JSX의 장점
 ***
-> 1. 코드가 간결해 진다.
-> 2. 가독성을 높여 준다.
-> 3. Injection Attack, 해킹 방법을 방어함으로써 보안에 강합니다.
+1. 코드가 간결해 진다.
+2. 가독성을 높여 준다.
+3. Injection Attack, 해킹 방법을 방어함으로써 보안에 강합니다.
 
  <br>
 
@@ -32,6 +32,11 @@ const element = <a href="https://www.reactjs.org" />;
 
  <br>
 
+### Week04.1.4. 실습하기
+ ***
+ 1. chapter_03 디렉토리 생성
+ 2. Book.jsx, Library.jsx 생성
+ 3. index.js 내용 수정
 
 
 
