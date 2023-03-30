@@ -68,6 +68,66 @@ setInterval(tick, 1000);
 
  <br>
 
+ ### :pushpin: Week05.2.3. Props의 특징
+ ***
+1. 변경할수 없다.(읽기전용)
+> 같은 Props가 들어오면 항상 같은 엘리먼트를 리턴해야됨.<br>
+>속성이 다른 엘리먼트를 생성하려면 `새로운 props를 컴포넌트에 전달`하면 됨
+
+ <br>
+
+ ### :pushpin: Week05.2.4. Props의 사용법
+ ***
+ - `JSX`에서는 컴포넌트에 `키-값 쌍` 형태로 구성
+ - 문자열 이외 정수,변수, 다른 컴포넌트 등이 들어갈 경우 `중괄호를 사용해 감싸줌`
+
+```javascript
+<Profile
+  name="소플"
+  introduction="안녕하세요"
+  viewCount={1500} //정수에 중괄호 사용
+/>
+```
+- `JSX가 아니면`, `createElement()함수의 두번째 파라미터`로 객체 입력
+
+ <br>
+
+  ### :pushpin: Week05.2.5. 컴포넌트 종류
+ ***
+1. 함수 컴포넌트
+> props를 받아, 엘리먼트를 리턴<br>
+```javascript
+function Welcome(props){
+  return <h1> 안녕! {props.name}</h1>
+}
+```
+2. 클래스 컴포넌트
+> 상속받아서 컴포넌트 생성<br>
+```javascript
+class Welcome extends React.Component{
+  render(){
+    return <h1> 안녕! {props.name}</h1>
+  }
+}
+```
+ <br>
+
+   ### :pushpin: Week05.2.6. 컴포넌트 이름 짓기
+ ***
+컴포넌트 **`이름은 항상 대문자로 시작`**
+
+<br>
+
+   ### :pushpin: Week05.2.7. 컴포넌트 랜더링
+ ***
+> 컴포넌트로부터 `엘리먼트를 생성`하여 이를 `리액트 DOM에 전달`
+
+<br>
+
+   ### :pushpin: Week05.2.7. 컴포넌트 합성
+ ***
+여러개의 컴포넌트를 합쳐서 하나의 컴포넌트를 만드는 것
+
 
  <br><br>
 
