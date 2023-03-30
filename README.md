@@ -25,15 +25,30 @@
 
  <br>
 
-### :pushpin: Week05.1.4. 엘리먼트의 
+### :pushpin: Week05.1.4. 렌더링된 엘리먼트 업데이트
 ***
-- 리
+tick() 함수가 호출될 때마다 기본엘리먼트를 변경하는 것이 아닌<br>
+`새로운 엘리먼트를 생성해서 바꿔치기`하는 것임.
+```javascript
+function tick(){
+  const element = (
+    <div>
+      <h1>안녕, 리액트!</h1>
+      <h2>현재 시간:: {new Date().toLocaleTimeString()}</h2>
+    </div>
+  );
+  ReactDOM.render(element, document.getElementById('root'));
+}
+
+setInterval(tick, 1000);
+```
 
  <br>
 
  ### :pushpin: Week05.1.5. 실습하기
 ***
-1. 
+1. 4-3 랜더링된 엘리먼트 업데이트하기(시간이 1초마다 바뀜)
+  - clock.html
 
  <br>
 
