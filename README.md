@@ -128,7 +128,7 @@ const element = <a href="https://www.reactjs.org" />;
 <br><br>
 
 ## | 2주차(23.03.09)
-  ## :open_file_folder:**Week02.1. Git(깃)에 대해**
+  ## :open_file_folder: **Week02.1. Git(깃)에 대해**
 
 ### :pushpin: Week02.1.1. Git 관련
 ***
@@ -136,7 +136,7 @@ const element = <a href="https://www.reactjs.org" />;
 >2. 23-React1 폴더를 깃 계정과 연동 후 README.md 를 작성
 >3.  gitignore은 깃허브와 구글 검색을 통해 쉽게 생성가능
 
-## :open_file_folder:**Week02.2. Javascript에 대해**
+## :open_file_folder: **Week02.2. Javascript에 대해**
 ### :pushpin: Week02.2.1. Javascript(자바스크립트)란?
 ***
 
