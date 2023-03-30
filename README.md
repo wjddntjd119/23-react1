@@ -49,8 +49,9 @@ setInterval(tick, 1000);
 ***
 1. 4-3 랜더링된 엘리먼트 업데이트하기(시간이 1초마다 바뀜)
   - clock.html
-
- <br>
+2. 4-4 시계만들기
+  - Clock.jsx 추가
+  - index.js 수정
 
  <br><br>
 
