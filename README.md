@@ -11,20 +11,7 @@
 
  <br>
 
-  ### :pushpin: Week06.1.2. 란?
- ***
-
-
- <br>
-
-  ### :pushpin: Week06.1.1. 란?
- ***
-
-
- <br>
-
-
- ### :pushpin: Week06.1.5. 실습하기
+ ### :pushpin: Week06.1.2. 실습하기
  ***
  1. 댓글 컴포넌트 만들기
   - Comment.jsx 생성
@@ -34,6 +21,52 @@
 
  <br>
 
+  ## :open_file_folder: **Week06.2. state 대해**
+ ### :pushpin: Week06.2.1. state란?
+ ***
+ 리액트 컴포넌트의 `변경가능`한 데이터
+
+
+ <br>
+
+  ### :pushpin: Week06.2.2. state의 특징
+ ***
+> 리액트만의 특별한 형태가 아닌 `단지 자바스크립트 객체`<br>
+> **state은 직접 수정해서는 안된다.**
+
+`setState() 함수 사용!!`
+```javascript
+//state를 직접 수정(잘못된 방법)
+this.state = {
+  name: '잘못된방법'
+}
+
+//setState 함수를 이용한 수정
+this.setState({
+  name: '맞는방법'
+})
+```
+
+ <br>
+
+  ### :pushpin: Week06.2.3. 생명주기란?
+ ***
+> `컴포넌트의 생성시점, 사용시점, 종료 시점`을 나타냄
+
+1. 랜더링은 `props,setState,forceUpdate()`에 의해 상태가 변경되면 발생!
+2. 랜더링이 끝나면 `componentDidUpdate()`함수 호출
+3. 마지막으로 컴포넌트가 언마운트 되면 `compomentWillUnmount()`함수 호출
+
+ <br>
+
+   ### :pushpin: Week06.2.4. 실습하기
+ ***
+1. state와 생명주기 함수 사용하기
+  - 집가서 코드 공부하기
+  - Notification.jsx
+  - NotificationList.jsx
+
+ <br>
 
 
  <br><br>
