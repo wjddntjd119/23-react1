@@ -1,5 +1,68 @@
 # **React1_201930327_정우성**
 
+## | 9주차(23.04.27)
+## :open_file_folder: **Week09.1. 이벤트 핸들링**
+ ### :pushpin: Week09.1.1. DOM 이벤트 VS React 이벤트
+ ***
+1. Dom 이벤트
+```js
+<button onclick="activate()">
+```
+2. React 이벤트
+```js
+<button onClick={activate}>
+```
+
+> Dom에서는 **onclick 소문자**, React에서는 **onClick 대문자**<br>
+이벤트호출을 DOM에서는 **문자열**로, React에서는 **함수**로 전달
+
+  <br>
+
+ ### :pushpin: Week09.1.2. 함수형으로 이벤트 바꾸기
+ ***
+ ```js
+ // 방법1
+ function handleClick(){
+  setIsToggleOn((isToggleOn)=> !isToggleOn);
+ }
+//방법2
+  const handleClick = () => {
+  setIsToggleOn((isToggleOn)=> !isToggleOn);
+ }
+ ```
+> **어디서든지 부르고 싶을때 클래스형 함수**로 선언<br>
+**많이 사용하지 않을 경우 화살표 함수**로 사용
+
+  <br>
+
+ ### :pushpin: Week09.1.3. Arguments 전달하기
+ ***
+ > 함수를 정의할 때는 파라미터, 매개변수<br>
+ 함수를 사용할 때는 Argument, 인자 라고 부름
+
+ ```js
+ <button onClick={(event) => this.deleteItem(id, event)}>삭제하기</button>
+
+  <button onClick={this.deleteItem.bind(this, id)}>삭제하기</button>
+ ```
+bind를 이용한 방법은 첫번째 인자로 id, **event가 두번째 인자로 자동으로 전달**
+
+ <br>
+
+  ### :pushpin: Week09.1.4. 이벤트 처리하기
+ ***
+ >
+
+ <br>
+
+  ### :pushpin: Week09.5. 실습하기
+ ***
+ >
+
+ <br>
+
+ <br><br>
+
 ## | 7주차(23.04.13)
 ## :open_file_folder: **Week07.1. 훅에 대해**
  ### :pushpin: Week07.1.1. 훅(Hook)이란 무엇인가
