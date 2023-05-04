@@ -31,9 +31,9 @@
 
 리액트에서의 키의 값은 `같은 리스트에 있는 엘리먼트 사이`에서만 고유한 값이면 된다.
 
-1. 숫자 값을 이용
+1. 숫자 값을 이용(키값이 중복 될 수 있음)
 2. id값을 이용(보통적으로 많이 씀)
-3. 인덱스 사용
+3. 인덱스 사용(명시적으로 넣어주지 않으면 기본적으로 사용)
  
 <br>
 
@@ -43,6 +43,79 @@
 - AttendanceBook.jsx
  
 <br>
+
+## :open_file_folder: **Week10.2. 폼**
+ ### :pushpin: Week10.2.1. 폼이란?
+ ***
+> 사용자로부터 입력을 받기 위해 사용하는 양식
+
+ <br>
+
+  ### :pushpin: Week10.2.2. 제어 컴포넌트
+ ***
+ `사용자가 입력`한 값에 `접근하고 제어`할 수 있도록 해주는 컴포넌트
+>그 값이 리액트의 통제를 받는 입력 폼 엘리먼트
+ <br>
+
+  ### :pushpin: Week10.2.3. 제어 컴포넌트의 종류
+ ***
+ 1. input 태그
+
+ ```js
+ <input type="text" value = {value} onChange={handleChange}/>
+
+ //입력을 받고 변화가 생길경우 handleChange 함수를 실행시켜 값을 state에 저장
+ ```
+
+2. textarea 태그
+
+ ```js
+ <textarea type="text" value = {value} onChange={handleChange}/>
+ 
+ //input 태그와 마찬가지로 state 변화된 값을 저장
+ ```
+
+3. select 태그
+ ```js
+ <select type="text" value = {value} onChange={handleChange}>
+  <option value="apple">사과</option>
+  .
+  .
+  .
+</select>
+
+//value로 선택된 옵션의 값이 들어감
+ ```
+
+ 5. File input 태그
+ ```js
+ <input type="file" />
+ ```
+  > 사용자가 하나 또는 여러개의 파일을 선택할수 있게 하는 태그
+ 
+ `읽기전용 태그` 이므로, `비제어 컴포넌트`가 된다.
+
+
+ <br>
+
+  ### :pushpin: Week10.2.4. 여러개의 입력 다루기
+ ***
+ **`여러개의 state를 선언`**하여 각각의 입력값들을 받아주면 된다.
+
+ <br>
+
+  ### :pushpin: Week10.2.5. Input Null Value
+ ***
+ > `value prop은 넣되 자유롭게 입력`할 수 있게 만들고 싶을 경우, 값에 `undifined 또는 null`을 넣으면 된다.
+
+ <br>
+
+   ### :pushpin: Week10.2.6. 실습하기 
+ ***
+ 1. 사용자 정보 입력받기
+ - SignUp.jsx
+
+ <br>
 
 <br><br>
 
