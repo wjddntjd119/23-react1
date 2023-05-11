@@ -1,6 +1,33 @@
 # **React1_201930327_정우성**
 
 
+
+## | 11주차(23.05.11)
+## :open_file_folder: **Week11.1. State 끌어올리기**
+ ### :pushpin: Week11.1.1. Shared State
+ ***
+> 어떤 컴포넌트의 state에 있는 데이터를 `여러 개의 하위 컴포넌트`에서 `공통적으로 사용`하는 경우
+
+-> 공유된 state
+
+<br>
+
+ ### :pushpin: Week11.1.2. state 끌어올리기
+ ***
+ >하위 컴포넌트의 state를 `공통된 부모 컴포넌트`로 `끌어올려서 공유`하는 방식
+
+<br>
+
+ ### :pushpin: Week11.1.3. 실습하기
+ ***
+ 1. 섭씨온도와 화씨온도 표시하기
+ - TemperatureInput.jsx
+ - Calculator.jsx
+
+<br>
+
+ <br><br>
+
 ## | 10주차(23.05.04)
 ## :open_file_folder: **Week10.1. 리스트와 키**
  ### :pushpin: Week10.1.1. 리스트와 키란?
