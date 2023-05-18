@@ -1,6 +1,67 @@
 # **React1_201930327_정우성**
 
+## | 12주차(23.05.18)
+## :open_file_folder: **Week12.1. 합성과 상속**
+### :pushpin: Week11.1.1. 합성이란?
+ ***
+ >`합성`: 여러개의 컴포넌트를 합쳐서 `새로운 컴포넌트`를 만드는 것
 
+ 1. **Containment**
+ - 하위 컴포넌트를 포합하는 형태의 합성 방법
+ - `children prop` 을 사용하여 자식 엘리먼트를 출력에 그대로 전달 하는것이 좋음
+ ```js
+ React.createElement(
+  type,
+  [props],
+  [...children]
+  ///children이 배열인 이유: 여러개의 하위 컴포넌트를 가질 수 있음.
+ )
+ ```
+
+ ```js
+ //예제1
+
+ function WelcomeDialog(props){
+  return(
+    <FancyBorder color ="blue">
+      <h1 className ="Dialog">
+        어서오세요
+      </h1>
+      <p className = "Dialog-message">
+        사이트 방문을 환영합니다
+      </p>
+    </FancyBorder>
+)
+ }
+ ```
+
+ > FancyBorder 컴포넌트로 감싸진 부분에 ```<h1>, <p>``` 두개의 태그가 있음
+
+ >이 두 태그 모두 FancyBorder 컴포넌트에 `children이라는 이름의 props로 전달`
+
+<br>
+
+### :pushpin: Week11.1.2. 합성이란?
+ ***
+ >`합성`: 여
+
+<br>
+
+### :pushpin: Week11.1.2. 합성이란?
+ ***
+ >`합성`: 여
+
+<br>
+
+### :pushpin: Week11.1.2. 합성이란?
+ ***
+ >`합성`: 여
+
+<br>
+
+
+
+<br><br>
 
 ## | 11주차(23.05.11)
 ## :open_file_folder: **Week11.1. State 끌어올리기**
