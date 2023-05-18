@@ -31,31 +31,116 @@
         사이트 방문을 환영합니다
       </p>
     </FancyBorder>
-)
+  )
  }
  ```
 
  > FancyBorder 컴포넌트로 감싸진 부분에 ```<h1>, <p>``` 두개의 태그가 있음
 
  >이 두 태그 모두 FancyBorder 컴포넌트에 `children이라는 이름의 props로 전달`
+<br>
+
+2. **Specialization(특수화)**
+- 범용적인 개념을 구별이 되게 구체화 하는 것
+```js
+///예시2
+ function Dialog(props){
+  return(
+    <FancyBorder color ="blue">
+      <h1 className ="Dialog">
+        {props.title}
+      </h1>
+      <p className = "Dialog-message">
+        {props.message}
+      </p>
+    </FancyBorder>
+  )
+}
+
+function WelcomeDialog(props){
+  return(
+    <Dialog
+      title="어서오세요"
+      message="사이트 방문을 환영합니다"
+    />
+  )
+}
+```
+> `범용적`으로 쓸 수 있는 컴포넌트를 만들어 놓고 이를 `특수화 `시켜서 `컴포넌트를 사용하는 합성 방식`
 
 <br>
 
-### :pushpin: Week11.1.2. 합성이란?
- ***
- >`합성`: 여
+3. **Containment**와 **Specialization** 같이 사용
+- `props.children`을 통해 하위 컴포넌트 포함(Containment)
+
+- `별도의 props`를 선언하여 구체화 시킴(Specialization)
 
 <br>
 
-### :pushpin: Week11.1.2. 합성이란?
+### :pushpin: Week11.1.2. 상속이란?
  ***
- >`합성`: 여
+ > 다른 컴포넌트로부터 `상속 받아` 새로운 컴포넌트를 만드는것
 
 <br>
 
-### :pushpin: Week11.1.2. 합성이란?
+ but..!
+ ## 리액트에서는 상속보다는 **합성을 사용하는 것이 더 좋음!**
+
+<br>
+
+### :pushpin: Week11.1.3. 실습하기
  ***
- >`합성`: 여
+ 1. Card 컴포넌트 만들기
+ - Card. jsx
+ > `하위컴포넌트를 감싸서` 카드 형태로 보여줌`
+ ```js
+function Card(props){
+  const { title, backgroundColor, children } = props;
+
+  return(
+    <div
+      style={{
+        margin:8,
+        padding:8,
+        borderRadius: 8,
+        boxShadow: "0px 0px 4px grey",
+        backgroundColor: backgroundColor || "white",
+      }}
+    >
+      {title && <h1>{title}</h1>}
+      {children}
+    </div>
+  )
+}
+export default Card;
+ ```
+
+ <br>
+
+ - ProfileCard.jsx
+ >Card 컴포넌트를 사용하여 children으로 간단한 소개글
+ ```js
+import Card from "./Card";
+
+function ProfileCard(props){
+  return(
+    <Card title="신나는 코딩공부!" backgroundColor="#4ea04e">
+      <p>안녕하세요, 정우성입니다.</p>
+      <p>저는 리액트를 사용해서 개발하고 있습니다.</p>
+    </Card>
+  )
+}
+export default ProfileCard;
+ ```
+3. 실습화면
+<img src="./src/img/ch13.png">
+
+<br><br>
+
+## :open_file_folder: **Week11.2. 컨텍스트**
+### :pushpin: Week11.2.1. 합성이란?
+ ***
+ >
 
 <br>
 
