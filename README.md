@@ -2,7 +2,7 @@
 
 ## | 12주차(23.05.18)
 ## :open_file_folder: **Week12.1. 합성과 상속**
-### :pushpin: Week11.1.1. 합성이란?
+### :pushpin: Week12.1.1. 합성이란?
  ***
  >`합성`: 여러개의 컴포넌트를 합쳐서 `새로운 컴포넌트`를 만드는 것
 
@@ -19,7 +19,7 @@
  ```
 
  ```js
- //예제1
+ //예시1
 
  function WelcomeDialog(props){
   return(
@@ -77,7 +77,7 @@ function WelcomeDialog(props){
 
 <br>
 
-### :pushpin: Week11.1.2. 상속이란?
+### :pushpin: Week12.1.2. 상속이란?
  ***
  > 다른 컴포넌트로부터 `상속 받아` 새로운 컴포넌트를 만드는것
 
@@ -88,7 +88,7 @@ function WelcomeDialog(props){
 
 <br>
 
-### :pushpin: Week11.1.3. 실습하기
+### :pushpin: Week12.1.3. 실습하기
  ***
  1. Card 컴포넌트 만들기
  - Card. jsx
@@ -137,14 +137,106 @@ export default ProfileCard;
 
 <br><br>
 
-## :open_file_folder: **Week11.2. 컨텍스트**
-### :pushpin: Week11.2.1. 합성이란?
+## :open_file_folder: **Week12.2. 컨텍스트**
+### :pushpin: Week12.2.1. 컨텍스트란?
  ***
- >
+ >컴포넌트 트리를 통해 `곧바로 컴포넌트에 전달하는 방식`
+
+<br>
+
+### :pushpin: Week12.2.2. 컨텍스트를 자주 필요하는 것
+ ***
+ 사용자의 로그인 여부, 로그인 정보, UI 테마 등
+ ```js
+ ///예시1
+
+const ThemeContext = React.createContext('light');
+
+function App(props){
+  return(
+    <ThemeContext.Provider value="dark">
+      <Toolbar />
+    </ThemeContext.Provider>
+  )
+}
+
+function Toolbar(props){
+  return(
+    <div>
+      <ThemeButton />
+    </div>
+  )
+}
+
+function ThemeButton(props){
+  return(
+    <ThemeContext.Consumer>
+      {value => <Button theme={value}/>}
+    </ThemeCOntext.Consumer>
+  )
+}
+ ```
+> Provider의 `모든 하위 컴포넌트`가 얼마나 깊이 위치해 있는지 관계없이 `컨텍스트의 데이터를 읽을 수 있음.`
 
 <br>
 
 
+### :pushpin: Week12.2.3. 컨텍스트 사용하기전 고려할 점
+ ***
+ > 컴포넌트와 컨텍스트가 연동되면 재사용성이 떨어짐
+
+<br>
+but..!
+
+ > `다른 레벨의 많은 컴포넌트`가 데이터를 `필요`로 하는 경우가 아니라면, 기존 방식대로 `props를 통해 데이터를 전달`하는 것이 `적합`!
+
+<br>
+
+### :pushpin: Week12.2.4. 컨텍스트 API
+ ***
+ 1. React.createContext()
+ - 컨텍스트 생성 함수
+ - 컨텍스트 객체를 리턴
+ ```js
+ ///예시1
+const MyContext = React.createContext(기본값);
+ ```
+
+ <br>
+
+ 2. Context.Provider
+ - 하위컴포넌트를 감싸서 해당 컨텍스트 데이터에 접근 할 수 있게함.
+ ```js
+ ///예시2
+<MyContext.Provider value={/*접근할 데이터 prop*/}>
+
+ ```
+ - consumer 컴포넌트 라고도 부름
+ - `prop값이 변경될때` 하위 컴포넌트가 컨텍스트를 사용한다면<br>
+ `하위 컴포넌트 업데이트` 발생
+
+<br>
+
+3. Class.contextType
+- Provider `하위에 있는 클래스 컴포넌트`에서 `컨텍스트 데이터 접근`하기 위해 사용
+
+
+<br>
+
+4. Context.Consumer
+- 컨텍스트의 데이터를 구독하는 컴포넌트
+```js
+<MyContext.Consumer>
+  {value=>/*컨텍스트 값에 따라 컴포넌트 렌더링*/}
+</MyContext.COnsumer>
+```
+
+<br>
+
+5. Context.displayName
+- 크롬의 리액트 개발자 도구에서 표시되는 컨텍스트 객체의 이름
+
+<br>
 
 <br><br>
 
