@@ -1,5 +1,13 @@
 # **React1_201930327_정우성**
 
+## | 13주차(23.05.25)
+## :open_file_folder: **Week13.1. 컨텍스트**
+### :pushpin: Week13.1.1. 합성이란?
+ ***
+```js
+const MyContext = React.createContext(기본값);
+```
+> React.createContext(기본값) : 컨텍스트 생성
 ## | 12주차(23.05.18)
 ## :open_file_folder: **Week12.1. 합성과 상속**
 ### :pushpin: Week12.1.1. 합성이란?
